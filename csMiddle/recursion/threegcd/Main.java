@@ -1,4 +1,4 @@
-package csMiddle.recursion.threegdc;
+package csMiddle.recursion.threegcd;
 
 public class Main {
     public static void main(String[] args) {
