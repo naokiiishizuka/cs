@@ -1,4 +1,4 @@
-package csMiddle.recursion.culcurationArea;
+package csMiddle.recursion.culcurationarea;
 
 public class Main {
     public static void main(String[] args) {
