@@ -47,17 +47,17 @@ public class Main{
         }
         return result;
     }
-//
-//    public static int linkedListLastValue(SinglyLinkedListNode<Integer> head){
-//        SinglyLinkedListNode<Integer> current = head;
-//        while(current != null) {
-//            if(current.next == null) {
-//                return current.data;
-//            }
-//            current = current.next;
-//        }
-//        return -1;
-//    }
+
+    public static int linkedListLastValue(SinglyLinkedListNode<Integer> head){
+        SinglyLinkedListNode<Integer> current = head;
+        while(current != null) {
+            if(current.next == null) {
+                return current.data;
+            }
+            current = current.next;
+        }
+        return -1;
+    }
 //
 //    public static SinglyLinkedListNode<Integer> deleteTail(SinglyLinkedListNode<Integer> head){
 //        SinglyLinkedListNode<Integer> current = head;
