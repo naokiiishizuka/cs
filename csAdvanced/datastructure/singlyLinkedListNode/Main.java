@@ -11,7 +11,7 @@ class SinglyLinkedListNode<E>{
         this.next = null;
     }
 
-    private void printLinkedList(SinglyLinkedListNode<E> head) {
+    public void printLinkedList(SinglyLinkedListNode<E> head) {
         SinglyLinkedListNode<E> current = head;
 
         while (current != null) {
@@ -25,7 +25,8 @@ class SinglyLinkedListNode<E>{
 
 public class Main{
     public static void main(String[] args){
-        SinglyLinkedListNode<Integer> nodeList = getLinkedList();
+        SinglyLinkedListNode<Integer> nodeList = getLinkedList(new int[]{1, 2, 3});
+        nodeList.printLinkedList(nodeList);
     }
     public static SinglyLinkedListNode<Integer> getLinkedList(int[] arr){
         SinglyLinkedListNode<Integer> head = new SinglyLinkedListNode<>(arr[0]);
