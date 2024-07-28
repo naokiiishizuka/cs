@@ -73,5 +73,21 @@ public class Main{
         }
         return head;
     }
+
+    public static int findMinNum(SinglyLinkedListNode<Integer> head){
+        SinglyLinkedListNode<Integer> current = head;
+        int index = 0;
+        int minIndex = 0;
+        int minValue = Integer.MAX_VALUE;
+        while(current != null) {
+            if(minValue >= current.data) {
+                minValue = current.data;
+                minIndex = index;
+            }
+            index++;
+            current = current.next;
+        }
+        return minIndex;
+    }
 }
 
