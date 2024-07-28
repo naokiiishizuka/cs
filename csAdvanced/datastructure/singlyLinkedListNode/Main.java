@@ -37,5 +37,41 @@ public class Main{
         }
         return head;
     }
+
+    public static int linkedListLength(SinglyLinkedListNode<Integer> head){
+        int result = 0;
+        SinglyLinkedListNode<Integer> current = head;
+        while(current != null) {
+            result++;
+            current = current.next;
+        }
+        return result;
+    }
+//
+//    public static int linkedListLastValue(SinglyLinkedListNode<Integer> head){
+//        SinglyLinkedListNode<Integer> current = head;
+//        while(current != null) {
+//            if(current.next == null) {
+//                return current.data;
+//            }
+//            current = current.next;
+//        }
+//        return -1;
+//    }
+//
+//    public static SinglyLinkedListNode<Integer> deleteTail(SinglyLinkedListNode<Integer> head){
+//        SinglyLinkedListNode<Integer> current = head;
+//        if(current.next == null) {
+//            return null;
+//        }
+//        while(current != null) {
+//            if(current.next.next == null) {
+//                current.next = null;
+//                break;
+//            }
+//            current = current.next;
+//        }
+//        return head;
+//    }
 }
 
