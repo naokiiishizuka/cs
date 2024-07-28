@@ -1,7 +1,5 @@
 package csAdvanced.datastructure.singlyLinkedListNode;
 
-import java.util.Arrays;
-
 class SinglyLinkedListNode<E>{
     public E data;
     public SinglyLinkedListNode<E> next;
@@ -26,7 +24,7 @@ class SinglyLinkedListNode<E>{
 public class Main{
     public static void main(String[] args){
         SinglyLinkedListNode<Integer> nodeList = getLinkedList(new int[]{1, 2, 3});
-        SinglyLinkedListNode<Integer> newNodeList =  insertAtPosition(nodeList, 0,3);
+        SinglyLinkedListNode<Integer> newNodeList =  insertAtPosition(nodeList, 0, 3);
         nodeList.printLinkedList(newNodeList);
     }
     public static SinglyLinkedListNode<Integer> getLinkedList(int[] arr){
@@ -59,7 +57,7 @@ public class Main{
         }
         return -1;
     }
-//
+
     public static SinglyLinkedListNode<Integer> deleteTail(SinglyLinkedListNode<Integer> head){
         SinglyLinkedListNode<Integer> current = head;
         if(current.next == null) {
@@ -102,6 +100,22 @@ public class Main{
             current = current.next;
         }
         return -1;
+    }
+
+    public static SinglyLinkedListNode<Integer> insertAtPosition(SinglyLinkedListNode<Integer> head, int position, int data){
+        SinglyLinkedListNode<Integer> current = head;
+        int index = 0;
+        while(current != null) {
+            if(index == position) {
+                SinglyLinkedListNode<Integer> tmp = current.next;
+                SinglyLinkedListNode<Integer> newNode = new SinglyLinkedListNode<Integer>(data);
+                current.next = newNode;
+                newNode.next = tmp;
+            }
+            current = current.next;
+            index++;
+        }
+        return head;
     }
 }
 
