@@ -90,6 +90,18 @@ public class Main{
         return minIndex;
     }
 
+    public static int linkedListSearch(SinglyLinkedListNode<Integer> head, int data){
+        SinglyLinkedListNode<Integer> current = head;
+        int index = 0;
+        while(current != null) {
+            if(current.data == data) {
+                return index;
+            }
+            index++;
+            current = current.next;
+        }
+        return -1;
+    }
 
 }
 
