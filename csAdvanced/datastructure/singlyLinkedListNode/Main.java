@@ -26,7 +26,8 @@ class SinglyLinkedListNode<E>{
 public class Main{
     public static void main(String[] args){
         SinglyLinkedListNode<Integer> nodeList = getLinkedList(new int[]{1, 2, 3});
-        nodeList.printLinkedList(nodeList);
+        SinglyLinkedListNode<Integer> newNodeList =  insertAtPosition(nodeList, 0,3);
+        nodeList.printLinkedList(newNodeList);
     }
     public static SinglyLinkedListNode<Integer> getLinkedList(int[] arr){
         SinglyLinkedListNode<Integer> head = new SinglyLinkedListNode<>(arr[0]);
@@ -102,6 +103,5 @@ public class Main{
         }
         return -1;
     }
-
 }
 
