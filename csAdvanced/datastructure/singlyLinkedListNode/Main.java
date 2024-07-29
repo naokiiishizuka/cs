@@ -23,8 +23,8 @@ class SinglyLinkedListNode<E>{
 
 public class Main{
     public static void main(String[] args){
-        SinglyLinkedListNode<Integer> nodeList = getLinkedList(new int[]{1, 2, 3});
-        SinglyLinkedListNode<Integer> newNodeList =  insertAtPosition(nodeList, 0, 3);
+        SinglyLinkedListNode<Integer> nodeList = getLinkedList(new int[]{1, 5, 8});
+        SinglyLinkedListNode<Integer> newNodeList = insertNodeInSorted(nodeList, 9);
         nodeList.printLinkedList(newNodeList);
     }
     public static SinglyLinkedListNode<Integer> getLinkedList(int[] arr){
@@ -115,6 +115,32 @@ public class Main{
             current = current.next;
             index++;
         }
+        return head;
+    }
+
+    public static SinglyLinkedListNode<Integer> insertNodeInSorted(SinglyLinkedListNode<Integer> head, int data){
+        SinglyLinkedListNode<Integer> newNode = new SinglyLinkedListNode<Integer>(data);
+
+        // リストが空の場合
+        if (head == null) {
+            return newNode;
+        }
+
+        // 新しいノードがリストの最初に挿入される場合
+        if (data <= head.data) {
+            newNode.next = head;
+            return newNode;
+        }
+
+        SinglyLinkedListNode<Integer> current = head;
+        while (current.next != null && current.next.data < data) {
+            current = current.next;
+        }
+
+        // 新しいノードを挿入
+        newNode.next = current.next;
+        current.next = newNode;
+
         return head;
     }
 }
