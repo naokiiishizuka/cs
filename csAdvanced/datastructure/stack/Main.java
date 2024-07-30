@@ -1,5 +1,7 @@
 package csAdvanced.datastructure.stack;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args){
         Stack s1 = new Stack();
@@ -17,6 +19,18 @@ public class Main {
         s2.push(9);
         s2.push(8);
         System.out.println(s2.peek());
+    }
+
+    public static int[] reverse(int[] arr){
+        Stack stack = new Stack();
+        for(int item: arr) {
+            stack.push(item);
+        }
+        ArrayList<Integer> result = new ArrayList<>();
+        while(stack.head != null) {
+            result.add(stack.pop());
+        }
+        return result.stream().mapToInt(i -> i).toArray();
     }
 }
 
