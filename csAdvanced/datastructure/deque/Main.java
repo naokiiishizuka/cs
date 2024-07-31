@@ -18,6 +18,16 @@ public class Main {
         q.enqueueFront(20);
         System.out.println(q.dequeueBack());
     }
+
+    public static int getMax(int[] arr){
+        Deque q = new Deque();
+        q.enqueueFront(arr[0]);
+        for(int i=1; i<arr.length; i++) {
+            if(q.peekFront() < arr[i]) q.enqueueFront(arr[i]);
+            else q.enqueueBack(arr[i]);
+        }
+        return q.peekFront();
+    }
 }
 
 class Item {
