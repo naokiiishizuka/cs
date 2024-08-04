@@ -1,4 +1,4 @@
-package csAdvanced.datastructure.bstExsit;
+package csAdvanced.datastructure.BinaryTreeExsit;
 
 class BinaryTree<E>{
     public E data;
