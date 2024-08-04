@@ -1,9 +1,5 @@
 package csAdvanced.datastructure.invertTree;
 
-import java.security.cert.CertificateRevokedException;
-import java.util.ArrayList;
-import java.util.Arrays;
-
 class BinaryTree<E>{
     public E data;
     public BinaryTree<E> left;
